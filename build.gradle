@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.letscode.utils'
+version '1.0-0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://repo.repsy.io/mvn/ln30/repo-s811'
+        credentials {
+            username 'ln30'
+            password 'teste12E'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.letscode.gradle.utils:GradleArrayUtils:1.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
